@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paralun.app.controller.BarangController">
+   <children>
+      <BorderPane layoutX="222.0" layoutY="115.0" prefHeight="467.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Data Barang">
+                     <font>
+                        <Font name="Arial" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="503.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="251.0" prefWidth="666.0" spacing="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Label text="Kode Barang" />
+                        <TextField fx:id="textKode" />
+                        <Label text="Nama Barang" />
+                        <TextField fx:id="textNama" layoutX="10.0" layoutY="27.0" />
+                        <Label text="Kategori" />
+                        <TextField fx:id="textKategori" layoutX="10.0" layoutY="27.0" />
+                        <Label text="Stok" />
+                        <TextField fx:id="textStok" layoutX="10.0" layoutY="27.0" />
+                        <Label text="Harga" />
+                        <TextField fx:id="textHarga" layoutX="10.0" layoutY="27.0" />
+                     </children>
+                  </VBox>
+                  <HBox layoutX="14.0" layoutY="252.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="btnSimpan" mnemonicParsing="false" onAction="#insert" text="Simpan" />
+                        <Button fx:id="btnUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#update" text="Update" />
+                        <Button fx:id="btnDelete" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+                        <Button fx:id="btnRefresh" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tabelBarang" layoutX="14.0" layoutY="289.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="289.0">
+                    <columns>
+                      <TableColumn fx:id="columnKode" prefWidth="81.0" text="Kode" />
+                      <TableColumn fx:id="columnNama" prefWidth="219.0" text="Nama Barang" />
+                        <TableColumn fx:id="columnKategori" minWidth="0.0" prefWidth="142.0" text="Kategori" />
+                        <TableColumn fx:id="columnStok" prefWidth="96.0" text="Stok" />
+                        <TableColumn fx:id="columnHarga" prefWidth="114.0" text="Harga" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
